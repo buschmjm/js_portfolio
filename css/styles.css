@@ -1,0 +1,11 @@
+/* Custom styles for Jacob Buschmann Portfolio */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
