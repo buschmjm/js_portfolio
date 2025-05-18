@@ -18,7 +18,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNav"">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
@@ -28,11 +28,18 @@
     </div>
   </nav>
   <main>
-    <header class="text-center py-5 mb-4">
-      <div class="container">
-        <img src="assets/images/lnkdn_pfp.jpg" alt="Jacob Buschmann" class="profile-img mb-3">
-        <h1 class="display-1">About Me</h1>
-        <p>I’m a U.S. Navy veteran turned software developer with more than six years of professional experience and a technical diploma in Software Development. At Matt’s Moving I moved from sales into IT leadership, building the internal tools that now run everything from driver onboarding to real-time truck telemetry.</p>
+    <header class="container-fluid mb-5 position-relative" style="width:90vw; max-width:90vw; margin-left:5vw; margin-right:5vw;">
+      <div class="position-relative d-flex flex-column align-items-center" style="max-width: 600px; margin-left:auto; margin-right:auto; padding-top: 60px;">
+        <div style="height: 60px;"></div> <!-- Spacer to ensure image is not covered by navbar -->
+        <div class="position-relative" style="z-index:2; margin-bottom: -35px;"> <!-- Negative margin to overlap card by 1/4 -->
+          <div style="border: 4px solid #dee2e6; border-radius: 50%; box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15); display: inline-block; padding: 0; background: #fff;">
+            <img src="assets/images/lnkdn_pfp.jpg" alt="Jacob Buschmann" class="profile-img" style="display:block; border-radius: 50%; margin:0; padding:0; width: 140px; height: 140px; object-fit: cover;">
+          </div>
+        </div>
+        <div class="bg-light rounded-4 shadow border px-3 py-4 text-center" style="max-width: 600px; margin-left:auto; margin-right:auto; padding-left: 10px; padding-right: 10px; position:relative; z-index:1; padding-top: 55px;">
+          <h1 class="display-1">About Me</h1>
+          <p>I’m a U.S. Navy veteran turned software developer with more than six years of professional experience and a technical diploma in Software Development. At Matt’s Moving I moved from sales into IT leadership, building the internal tools that now run everything from driver onboarding to real-time truck telemetry.</p>
+        </div>
       </div>
     </header>
     <section class="container mb-5 position-relative" style="max-width: 700px;">
@@ -114,9 +121,15 @@
         </ul>
       </div>
     </section>
-    <section class="container mb-5 text-center">
-      <h3>Contact</h3>
-      <p>Email: <a href="mailto:buschmann.jake@gmail.com">buschmann.jake@gmail.com</a> | Phone: <a href="tel:+17607189504">(760) 718-9504</a></p>
+    <section class="container-fluid mb-5 position-relative" style="width:90vw; max-width:90vw; margin-left:5vw; margin-right:5vw;">
+      <div class="position-absolute top-0 start-0 ms-4" style="z-index:2;">
+        <span class="bg-secondary text-white px-4 py-2 rounded-pill shadow fs-4" style="font-weight: 400;">
+          Contact
+        </span>
+      </div>
+      <div class="bg-light rounded-pill shadow border px-4 py-4 pt-5 pb-3 mt-3 text-center">
+        <p class="mb-0">Email: <a href="mailto:buschmann.jake@gmail.com">buschmann.jake@gmail.com</a> | Phone: <a href="tel:+17607189504">(760) 718-9504</a></p>
+      </div>
     </section>
   </main>
   <footer class="bg-light py-3">
