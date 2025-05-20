@@ -24,7 +24,13 @@ async function searchSpotifyTrack(trackName) {
       'Authorization': `Bearer ${token}`
     }
   });
-  return response.json();
+  const data = await response.json();
+  if (!data.tracks || !data.tracks.items) return [];
+  return data.tracks.items.map(track => ({
+    songName: track.name,
+    artistName: track.artists && track.artists.length > 0 ? track.artists[0].name : '',
+    albumArt: track.album && track.album.images && track.album.images.length > 0 ? track.album.images[0].url : ''
+  }));
 }
 
 module.exports = { searchSpotifyTrack };
